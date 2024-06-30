@@ -46,6 +46,15 @@ It's a well-known childhood word game in which traditionally is played with two 
 
 ### Technologies Used
 
+- GitHub
+    - Source code is hosted on GitHub.
+
+- Git
+    - Used for development of the game as well as commit and pushing code throughout.
+
+- [pyfiglet (PyPi)](https://pypi.org/project/pyfiglet/)
+    - Used to generate the ASCII art for the game title.
+
 [Return to Table of Contents](#table-of-contents)
 
 ## Testing

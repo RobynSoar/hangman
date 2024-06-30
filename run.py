@@ -1,3 +1,4 @@
+# Imports
 from pyfiglet import figlet_format # Imports pyfiglet to create ASCII art
 import title # Imports from title.py
 
