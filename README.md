@@ -55,6 +55,9 @@ It's a well-known childhood word game in which traditionally is played with two 
 - [pyfiglet (PyPi)](https://pypi.org/project/pyfiglet/)
     - Used to generate the ASCII art for the game title.
 
+- [colorama](https://pypi.org/project/colorama/)
+    - Used to colour ASCII art and text within the game.
+
 [Return to Table of Contents](#table-of-contents)
 
 ## Testing
@@ -76,6 +79,11 @@ It's a well-known childhood word game in which traditionally is played with two 
 [Return to Table of Contents](#table-of-contents)
 
 ## Credits
+
+### Walkthrough Code
+
+- [Coding Professor - How to create ASCII art text in Python](https://www.youtube.com/watch?v=Y0QiBbI3MWs)
+    - YouTube video helped me understand how to import and style ASCII art fonts for the Hangman title.
 
 ### Acknowledgements
 
