@@ -13,11 +13,11 @@ def print_welcome_message():
     """
     print(title.title) # Import title from title.py with styling
     print("Welcome to Hangman!")
-    print("Hangman is a game about guessing a random word one letter at a time.")
-    print("The word is hidden at the beginning and correct guesses will reveal it.")
-    print("You can guess individual letters or the whole word!")
-    print("You have 7 wrong guesses before it's Game Over.")
-    print("You can leave the game at any time by typing 'exit' into the terminal at any time\n")
+    print("Hangman is a game about guessing a random word one letter at a time.\n")
+    print("- The word is hidden at the beginning and correct guesses will reveal it.")
+    print("- You can guess individual letters or the whole word!")
+    print("- You have 7 wrong guesses before it's Game Over.")
+    print("- You can leave the game at any time by typing 'exit' into the terminal at any time\n")
 
 
 def play_question():
