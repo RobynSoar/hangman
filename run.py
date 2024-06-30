@@ -1,6 +1,10 @@
 # Imports
 from pyfiglet import figlet_format # Imports pyfiglet to create ASCII art
+from colorama import Fore, Style, init # Imports colorama to colour ASCII  art and reset colour
 import title # Imports from title.py
+
+# Initilizes colorama to reset colour changes
+init(autoreset=True)
 
 def print_welcome_message():
     """
