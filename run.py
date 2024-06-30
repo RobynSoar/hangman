@@ -6,8 +6,8 @@ def print_welcome_message():
 
     print("Welcome to Hangman!")
     print("Hangman is a game about guessing a random word one letter at a time.")
-    print("The word is hidden at the beginning and correct guesses will reveal")
-    print(" the word. You can guess individual letters or the whole word!")
+    print("The word is hidden at the beginning and correct guesses will reveal it.")
+    print("You can guess individual letters or the whole word!")
     print("You have 7 wrong guesses before it's Game Over.")
     print("You can leave the game at any time by typing 'exit' into the terminal at any time\n")
 
@@ -24,7 +24,8 @@ def play_question():
             print("Please enter either 'y' for Yes or 'n' for No")
         elif play == "n":
             print("Okay, let's play another time! Goodbye!")
-        else play == "y":
+        elif play == "y":
             get_player_name()
 
-        
+print_welcome_message()
+play_question() 
