@@ -1,9 +1,12 @@
+from pyfiglet import figlet_format # Imports pyfiglet to create ASCII art
+import title # Imports from title.py
+
 def print_welcome_message():
     """
     Print a welcome message to the user upon starting Hangman game terminal.
     Provides basic guideline and rules for user.
     """
-
+    print(title.title) # Import title from title.py with styling
     print("Welcome to Hangman!")
     print("Hangman is a game about guessing a random word one letter at a time.")
     print("The word is hidden at the beginning and correct guesses will reveal it.")
@@ -28,4 +31,4 @@ def play_question():
             get_player_name()
 
 print_welcome_message()
-play_question() 
+play_question()
