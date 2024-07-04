@@ -44,6 +44,8 @@ It's a well-known childhood word game in which traditionally is played with two 
 
 ### Flowchart
 
+![Hangman flowchart using Lucidchart](documentation/flowchart/hangman-flowchart.png)
+
 ### Technologies Used
 
 - GitHub
