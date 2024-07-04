@@ -1,6 +1,7 @@
 # Imports
 from pyfiglet import figlet_format # Imports pyfiglet to create ASCII art
 from colorama import Fore, Style, init # Imports colorama to colour ASCII  art and reset colour
+import sys
 import title # Imports from title.py
 
 # Initilizes colorama to reset colour changes
@@ -32,8 +33,27 @@ def play_question():
             print("Please enter either 'y' for Yes or 'n' for No")
         elif play == "n":
             print("Okay, let's play another time! Goodbye!")
+            return False
         elif play == "y":
-            get_player_name()
+            return True
+
+
+def get_player_name():
+    """
+    Asks the user for their name.
+    Validates user's name to be more than 1 character
+    """
+    while True:
+        username = input("Excellent! Please enter your name:\n")
+        if len(username) <= 1:
+            print("Please enter a name of at least two letters! Try again.")
+        elif not username.isalpha():
+            print("Your name should contain only alphabetical characters, try again.")
+        else:
+            print(f"Hello, {username}! Nice to meet you, let's play!")
+            return username
+
 
 print_welcome_message()
 play_question()
+get_player_name()
