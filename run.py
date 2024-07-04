@@ -3,6 +3,7 @@ from pyfiglet import figlet_format # Imports pyfiglet to create ASCII art
 from colorama import Fore, Style, init # Imports colorama to colour ASCII  art and reset colour
 import sys
 import title # Imports from title.py
+import words # Imports from words.py
 
 # Initilizes colorama to reset colour changes
 init(autoreset=True)
@@ -53,6 +54,16 @@ def get_player_name():
         else:
             print(f"Hello, {username}! Nice to meet you, let's play!")
             return username
+
+def select_random_word():
+    """
+    Selects a word and it's corrponding hint from the words dictionary within words.py.
+    Returns words in uppercase and hints capitilized.
+    """
+    selected_word = random.choice(words)
+    word = selected_word["word"]
+    hint = selected_word["hint"]
+    return word.upper(), hint.capitilized()
 
 def main():
     """
