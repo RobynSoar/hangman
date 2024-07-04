@@ -35,6 +35,7 @@ def play_question():
             print("Okay, let's play another time! Goodbye!")
             return False
         elif play == "y":
+            get_player_name()
             return True
 
 
@@ -59,6 +60,5 @@ def main():
     """
     print_welcome_message()
     play_question()
-    get_player_name()
 
 main()
