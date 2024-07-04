@@ -1,7 +1,7 @@
 # Imports
 from pyfiglet import figlet_format # Imports pyfiglet to create ASCII art
 from colorama import Fore, Style, init # Imports colorama to colour ASCII  art and reset colour
-import sys
+import sys # Imports the sys module to exit the system
 import random # Imports the random module to allow function to return random words
 import title # Imports from title.py
 import words # Imports from words.py
@@ -62,9 +62,9 @@ def select_random_word():
     Returns words in uppercase and hints capitilized.
     """
     selected_word = random.choice(words)
-    word = selected_word["word"]
-    hint = selected_word["hint"]
-    return word.upper(), hint.capitilized()
+    word = selected_word["word"] # Chooses random word from words.py
+    hint = selected_word["hint"] # Gets the chosen word's hint from words.py
+    return word.upper(), hint.capitilized() # Returns words in uppercase and hints capitalised
 
 def main():
     """
@@ -73,4 +73,4 @@ def main():
     print_welcome_message()
     play_question()
 
-main()
+main() # Runs main function for the game to play
