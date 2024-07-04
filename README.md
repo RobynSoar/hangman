@@ -44,6 +44,10 @@ It's a well-known childhood word game in which traditionally is played with two 
 
 ### Flowchart
 
+[Lucidchart](https://www.lucidchart.com/pages/) was used to create a flowchart to map out the Hangman game.
+
+This aids the creation of the game by showing validators for user input, where functions are needed as well as game end points.
+
 ![Hangman flowchart using Lucidchart](documentation/flowchart/hangman-flowchart.png)
 
 ### Technologies Used
@@ -59,6 +63,9 @@ It's a well-known childhood word game in which traditionally is played with two 
 
 - [colorama](https://pypi.org/project/colorama/)
     - Used to colour ASCII art and text within the game.
+
+- [Lucidchart](https://www.lucidchart.com/pages/)
+    - Used to create a flowchart to map out the functions, validators and user input within the game.
 
 [Return to Table of Contents](#table-of-contents)
 
