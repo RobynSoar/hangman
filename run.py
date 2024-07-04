@@ -53,7 +53,12 @@ def get_player_name():
             print(f"Hello, {username}! Nice to meet you, let's play!")
             return username
 
+def main():
+    """
+    Run all program functions
+    """
+    print_welcome_message()
+    play_question()
+    get_player_name()
 
-print_welcome_message()
-play_question()
-get_player_name()
+main()
