@@ -41,7 +41,7 @@ def play_question():
 def get_player_name():
     """
     Asks the user for their name.
-    Validates user's name to be more than 1 character
+    Validates user's name to be more than 1 character and only alphabetical.
     """
     while True:
         username = input("Excellent! Please enter your name:\n")

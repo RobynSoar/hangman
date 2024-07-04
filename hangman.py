@@ -1,5 +1,8 @@
 def display_hangman(tries):
-
+    """
+    Displays each stage of the Hangman gallows for each wrong guess
+    made by the user.
+    """
     gallow_stages = [
 
         """
