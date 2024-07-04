@@ -72,9 +72,28 @@ It's a well-known childhood word game in which traditionally is played with two 
 
 ### Version Control
 
+The site was created using the Git editor and pushed to GitHUb to the remote repository 'hangman'
+
+The following git commands were used throughout development to push code to the remote repository:
+
+```git add <file>``` - This command was used to add the file(s) to the staging area before they are commited.
+
+```git commit -m "commit message"``` - This command was used to commit changes to the local repository queue ready to be pushed.
+
+```git push``` - This command was used to push all committed code to the remote repository 'woohoo-salon' on GitHub.
+
 ### Deployment to Heroku
 
 ### Clone the Repository Code Locally
+
+Navigate to the GitHub Repository you want to clone to use locally:
+1. Click on the code drop down button
+2. Click on HTTPS
+3. Copy the repository link to the clipboard
+4. Open your IDE of choice (Git must be installed for the next steps)
+5. Type git close copied-git-url into the IDE terminal
+
+The project will now of been cloned on your local machine for use.
 
 [Return to Table of Contents](#table-of-contents)
 
