@@ -24,6 +24,7 @@ It's a well-known childhood word game in which traditionally is played with two 
 - [Testing](#testing)
     - [Functional Testing](#functional-testing)
     - [Validator Testing](#validator-testing)
+    - [Fixed Bugs](#fixed-bugs)
 - [Deployment](#deployment)
     - [Version Control](#version-control)
     - [Deployment to Heroku](#deployment-to-heroku)
@@ -74,6 +75,34 @@ This aids the creation of the game by showing validators for user input, where f
 ### Functional Testing
 
 ### Validator Testing
+
+### Fixed Bugs
+
+__Random Module Bug__
+
+*Bug*
+
+Terminal posed the below message to notify of an issue.
+
+![Random Module - Bug](documentation/testing/random-module-bug.png)
+
+*Fix*
+
+I noticed that the import wasn't being seen, and I needed to tweak it for the random module to see the necessary information.
+
+![Random Module - Fix](documentation/testing/random-module-fix.png)
+
+__Boolean Game Stop Bug__
+
+*Bug*
+
+Main function would still execute after the User declined ('n') to play again.
+
+![Boolean Game Stop Bug](documentation/testing/if-no-game-stop-bug.png)
+
+*Fix*
+
+Added an ```if``` statement to the main function to only excute if ```play_question() = True```
 
 [Return to Table of Contents](#table-of-contents)
 
