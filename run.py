@@ -82,6 +82,8 @@ def play_game(word, hint, username):
     print(display_hangman(tries))
     print(word_completion)
     print(f"Hint: {hint}\n")
+    print(f"Guessed Letters: {guessed_letters}")
+    print(f"Guessed Words: {guessed_words}\n")
 
 
 def main():
