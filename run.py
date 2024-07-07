@@ -56,6 +56,7 @@ def get_player_name():
             print(f"Hello, {username}! Nice to meet you, let's play!")
             return username
 
+
 def select_random_word():
     """
     Selects a word and it's corrponding hint from the words dictionary within words.py.
@@ -66,11 +67,30 @@ def select_random_word():
     hint = selected_word["hint"] # Gets the chosen word's hint from words.py
     return word.upper(), hint.capitilized() # Returns words in uppercase and hints capitalised
 
+
+def play_game(word, hint, username):
+    """
+    Main function to play game.
+    """
+    word_completion = "_" * len(word)
+    guessed = False
+    guessed_letters = []
+    guessed_words = []
+    tries = 7
+
+    print(f"You've got 7 wrong guesses before the gallows are full, {username}! Let's play!")
+    print(display_hangman(tries))
+    print(word_completion)
+    print(f"Hint: {hint}")
+
+
 def main():
     """
     Run all program functions
     """
     print_welcome_message()
     play_question()
+    select_random_word()
+    play_game(word, hint, username)
 
 main() # Runs main function for the game to play
