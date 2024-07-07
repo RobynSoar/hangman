@@ -85,6 +85,17 @@ def play_game(word, hint, username):
     print(f"Guessed Letters: {guessed_letters}")
     print(f"Guessed Words: {guessed_words}\n")
 
+    while not guessed and tries > 0:
+        guess = input("Enter a letter or try for the whole word: \n")
+        if len(guess) == 1 and guess.isalpha(): # If guess is a single alphabetic letter
+            print("You entered a letter")
+        elif len(guess) == len(word) and guess.isalpha(): # If guess is the same length as chosen word and alphabetic
+            print("You entered a full word")
+        elif not (len(guess) == 1 or len(guess) == len(word)) and guess.isalpha(): # If input is alphabetic but more than a single letter but not length of word
+            print(Fore.RED + "Your guess needs to be either a single letter or the same length as the whole word, please try again.")
+        else: # If input contains any numbers or special characters
+            print(Fore.RED + "Please try again with no numbers or special characters!")
+
 
 def main():
     """
