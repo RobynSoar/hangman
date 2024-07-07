@@ -4,7 +4,8 @@ from colorama import Fore, Style, init # Imports colorama to colour ASCII  art a
 import sys # Imports the sys module to exit the system
 import random # Imports the random module to allow function to return random words
 import title # Imports from title.py
-import words # Imports from words.py
+from words import words # Imports from words.py
+from hangman import display_hangman # Imports from hangman.py
 
 # Initilizes colorama to reset colour changes
 init(autoreset=True)
@@ -37,7 +38,6 @@ def play_question():
             print("Okay, let's play another time! Goodbye!")
             return False
         elif play == "y":
-            get_player_name()
             return True
 
 
@@ -65,7 +65,7 @@ def select_random_word():
     selected_word = random.choice(words)
     word = selected_word["word"] # Chooses random word from words.py
     hint = selected_word["hint"] # Gets the chosen word's hint from words.py
-    return word.upper(), hint.capitilized() # Returns words in uppercase and hints capitalised
+    return word.upper(), hint.capitalize() # Returns words in uppercase and hints capitalised
 
 
 def play_game(word, hint, username):
@@ -90,6 +90,8 @@ def main():
     """
     print_welcome_message()
     play_question()
+    username = get_player_name()
+    word, hint = select_random_word()
     select_random_word()
     play_game(word, hint, username)
 
