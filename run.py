@@ -33,7 +33,7 @@ def play_question():
         play = input("Would you like to play? (y/n):\n").lower() # .lower to allow Capitilised Y/N
         # User input validation
         if play != "y" and play != "n":
-            print("Please enter either 'y' for Yes or 'n' for No")
+            print(Fore.RED + "Please enter either 'y' for Yes or 'n' for No")
         elif play == "n":
             print("Okay, let's play another time! Goodbye!")
             return False
@@ -49,11 +49,11 @@ def get_player_name():
     while True:
         username = input("Excellent! Please enter your name:\n")
         if len(username) <= 1:
-            print("Please enter a name of at least two letters! Try again.")
+            print(Fore.RED + "Please enter a name of at least two letters! Try again.")
         elif not username.isalpha():
-            print("Your name should contain only alphabetical characters, try again.")
+            print(Fore.RED + "Your name should contain only alphabetical characters, try again.")
         else:
-            print(f"Hello, {username}! Nice to meet you, let's play!")
+            print(Fore.CYAN + f"Hello, {username}! Nice to meet you, let's play!\n")
             return username
 
 
@@ -67,7 +67,7 @@ def select_random_word():
     hint = selected_word["hint"] # Gets the chosen word's hint from words.py
     return word.upper(), hint.capitalize() # Returns words in uppercase and hints capitalised
 
-
+# Inspired code
 def play_game(word, hint, username):
     """
     Main function to play game.
@@ -78,10 +78,10 @@ def play_game(word, hint, username):
     guessed_words = []
     tries = 7
 
-    print(f"You've got 7 wrong guesses before the gallows are full, {username}! Let's play!")
+    print(Fore.YELLOW + f"You've got 7 wrong guesses before the gallows are full, {username}! You can do this!\n")
     print(display_hangman(tries))
     print(word_completion)
-    print(f"Hint: {hint}")
+    print(f"Hint: {hint}\n")
 
 
 def main():
