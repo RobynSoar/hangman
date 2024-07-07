@@ -30,7 +30,7 @@ It's a well-known childhood word game in which traditionally is played with two 
     - [Deployment to Heroku](#deployment-to-heroku)
     - [Clone the Repository Code Locally](#clone-the-repository-code-locally)
 - [Credits](#credits)
-    - [Ackowledgements](#ackowledgements)
+    - [Acknowledgements](#acknowledgements)
 - [Author](#author)
 
 ## Features
