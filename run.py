@@ -89,10 +89,9 @@ def main():
     Run all program functions
     """
     print_welcome_message()
-    play_question()
-    username = get_player_name()
-    word, hint = select_random_word()
-    select_random_word()
-    play_game(word, hint, username)
+    if play_question():
+        username = get_player_name()
+        word, hint = select_random_word()
+        play_game(word, hint, username)
 
 main() # Runs main function for the game to play
