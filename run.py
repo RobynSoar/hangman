@@ -108,8 +108,14 @@ def play_game(word, hint, username):
 
     while not guessed and tries > 0:
         guess = input("Enter a letter or try for the whole word: \n")
+        if guess.lower() == "exit":  # If input is 'exit', confirm game exit
+            exit_confirmed = confirm_exit()
+            if exit_confirmed:
+                sys.exit()  # Exit the game if user confirms
+            else:
+                continue  # Continue the game if user decides not to exit
         # If guess is a single alphabetic letter
-        if len(guess) == 1 and guess.isalpha():
+        elif len(guess) == 1 and guess.isalpha():
             print("You entered a letter")
         # If guess is the same length as chosen word and alphabetic
         elif len(guess) == len(word) and guess.isalpha():
@@ -124,6 +130,25 @@ def play_game(word, hint, username):
         else:  # If input contains any numbers or special characters
             print(Fore.RED + "Please try again with no numbers or special \
                 characters!")
+
+
+def confirm_exit():
+    """
+    Prompts the user to confirm if they would like to exit the game with \
+        "y" or "n"
+    Returns True if the user confirms ("y"), False if the user denies ("n")
+    """
+    while True:
+        play = input(
+            Fore.YELLOW + "Are you sure you'd like to exit the game?\n"
+        ).lower()
+        if play == "n":
+            print(Fore.GREEN + "That's the spirit, you've got this!")
+            return False
+        elif play == "y":
+            print(Fore.BLUE + "Exiting the game. Goodbye till next time!")
+        else:
+            print(Fore.RED + "Please enter either 'y' for Yes or 'n' for No")
 
 
 def main():
