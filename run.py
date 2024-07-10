@@ -34,7 +34,7 @@ reveal it.")
     print("- You can guess individual letters or the whole word!")
     print("- You have 7 wrong guesses before it's Game Over.")
     print("- You can leave the game at any time by typing 'exit' into the \
-terminal at any time\n")
+terminal\n")
 
 
 def play_question():
@@ -125,7 +125,7 @@ full, {username}! You can do this!\n")
             not (len(guess) == 1 or len(guess) == len(word))
             and guess.isalpha()
         ):
-            print(Fore.RED + "Your guess needs to be either a single letter \
+            print(Fore.RED + "Your guess has to be either a single letter \
 or the same length as the whole word")
         else:  # If input contains any numbers or special characters
             print(Fore.RED + "Please try again with no numbers or special \
