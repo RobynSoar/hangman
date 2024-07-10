@@ -30,6 +30,8 @@ It's a well-known childhood word game in which traditionally is played with two 
     - [Deployment to Heroku](#deployment-to-heroku)
     - [Clone the Repository Code Locally](#clone-the-repository-code-locally)
 - [Credits](#credits)
+    - [Inspired Code](#inspired-code)
+    - [Walkthrough Code](#walkthrough-code)
     - [Acknowledgements](#acknowledgements)
 - [Author](#author)
 
@@ -136,6 +138,17 @@ The project will now of been cloned on your local machine for use.
 [Return to Table of Contents](#table-of-contents)
 
 ## Credits
+
+### Inspired Code
+
+- [Love Sandwiches - Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LS101+1/courseware/293ee9d8ff3542d3b877137ed81b9a5b/58d3e90f9a2043908c62f31e51c15deb/)
+    - Used for sections of basic code.
+
+- [How to Build HANGMAN with Python in 10 MINUTES - Kite](https://www.youtube.com/watch?v=m4nEnsavl6w)
+    - Used as guidance on how to excute certain parts of code.
+
+- [Write a long string on multiple line in Python - note.nkmk.me](https://note.nkmk.me/en/python-long-string/)
+    - Used to format code to fit within 80 characters on a single line by using newline characters and parenthesis.
 
 ### Walkthrough Code
 

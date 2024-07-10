@@ -3,7 +3,7 @@
 words = [
 
     {"word": "spring", "hint": "season (6 Letters)"},
-    {"word": "summer", "hint": "season (6 Letters)"},	
+    {"word": "summer", "hint": "season (6 Letters)"},
     {"word": "autumn", "hint": "season (6 Letters)"},
     {"word": "winter", "hint": "season (6 Letters)"},
     {"word": "strawberry", "hint": "fruit (10 Letters)"},
@@ -36,5 +36,4 @@ words = [
     {"word": "bored", "hint": "emotion (5 Letters)"},
     {"word": "surprised", "hint": "emotion (9 Letters)"},
     {"word": "excited", "hint": "emotion (7 Letters)"},
-    
 ]
