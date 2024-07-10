@@ -92,7 +92,7 @@ def play_game(word, hint, username):
     """
     Main function to play game.
     """
-    word_completion = "_ " * len(word)  # Displays "_" as chosen word length
+    word_completion = "_" * len(word)  # Displays "_" as chosen word length
     guessed = False  # Displays the word as "_" until guessed
     guessed_letters = []  # Empty list for guessed letters
     guessed_words = []  # Empty list for guessed words
@@ -130,7 +130,7 @@ full, {username}! You can do this!\n")
                     [guess if letter == guess else wc_letter
                      for letter, wc_letter in zip(word, word_completion)]
                 )
-                if "_ " not in word_completion:
+                if "_" not in word_completion:
                     guessed = True
         # If guess is the same length as chosen word and alphabetic
         elif len(guess) == len(word) and guess.isalpha():
