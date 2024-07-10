@@ -28,13 +28,13 @@ def print_welcome_message():
     print(title.title)  # Import title from title.py with styling
     print("Welcome to Hangman!")
     print("Hangman is a game about guessing a random word one letter at a \
-        time.\n")
+time.\n")
     print("- The word is hidden at the beginning and correct guesses will \
-        reveal it.")
+reveal it.")
     print("- You can guess individual letters or the whole word!")
     print("- You have 7 wrong guesses before it's Game Over.")
     print("- You can leave the game at any time by typing 'exit' into the \
-        terminal at any time\n")
+terminal at any time\n")
 
 
 def play_question():
@@ -64,20 +64,20 @@ def get_player_name():
         username = input("Excellent! Please enter your name:\n")
         if len(username) <= 1:
             print(Fore.RED + "Please enter a name of at least two letters! \
-                Try again.")
+Try again.")
         elif not username.isalpha():
             print(Fore.RED + "Your name should contain only alphabetical \
-                characters, try again.")
+characters, try again.")
         else:
             print(Fore.CYAN + f"Hello, {username}! Nice to meet you, let's \
-                play!\n")
+play!\n")
             return username
 
 
 def select_random_word():
     """
     Selects a word and it's corrponding hint from the words dictionary \
-        within words.py.
+within words.py.
     Returns words in uppercase and hints capitilized.
     """
     selected_word = random.choice(words)
@@ -99,7 +99,7 @@ def play_game(word, hint, username):
     tries = 7
 
     print(Fore.YELLOW + f"You've got 7 wrong guesses before the gallows are \
-        full, {username}! You can do this!\n")
+full, {username}! You can do this!\n")
     print(display_hangman(tries))
     print(word_completion)
     print(f"Hint: {hint}\n")
@@ -126,16 +126,16 @@ def play_game(word, hint, username):
             and guess.isalpha()
         ):
             print(Fore.RED + "Your guess needs to be either a single letter \
-                or the same length as the whole word, please try again.")
+or the same length as the whole word")
         else:  # If input contains any numbers or special characters
             print(Fore.RED + "Please try again with no numbers or special \
-                characters!")
+characters!")
 
 
 def confirm_exit():
     """
     Prompts the user to confirm if they would like to exit the game with \
-        "y" or "n"
+"y" or "n"
     Returns True if the user confirms ("y"), False if the user denies ("n")
     """
     while True:
