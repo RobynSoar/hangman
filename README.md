@@ -106,6 +106,22 @@ Main function would still execute after the User declined ('n') to play again.
 
 Added an ```if``` statement to the main function to only excute if ```play_question() = True```
 
+__Extra Space Bug__
+
+*Bug*
+
+Within the code ```word_completion = "_" * len(word)```, the "_" had been changed to have a space ("_ ") with the intention to give better readability to the user when the word was hidden.
+
+In the terminal this showed as intended, however, the hidden word took on the spaces as a hidden letter, and showed ```_ _ _ ``` instead of ```______``` for a 6 letter word.
+
+The program was also ending after 4-5 correct guesses, even with enough 'tries' left.
+
+*Fix*
+
+Simply reseting "_ " back to "_" fixed the part of the bug that limited the amount of tries given with correct guesses.
+
+Inside the words.py file dictionary, the amount of letters was also put into the hint given for each word, which accounts for the lack of visible spaces between hidden letters.
+
 [Return to Table of Contents](#table-of-contents)
 
 ## Deployment
