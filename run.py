@@ -50,9 +50,9 @@ def play_question():
             print(Fore.RED + "Please enter either 'y' for Yes or 'n' for No")
         elif play == "n":
             print("Okay, let's play another time! Goodbye!")
-            return False
+            return False  # Exits game play
         elif play == "y":
-            return True
+            return True  # Continues game play
 
 
 def get_player_name():
@@ -62,13 +62,13 @@ def get_player_name():
     """
     while True:
         username = input("Excellent! Please enter your name:\n")
-        if len(username) <= 1:
+        if len(username) <= 1:  # If input is less than 1 character
             print(Fore.RED + "Please enter a name of at least two letters! \
 Try again.")
-        elif not username.isalpha():
+        elif not username.isalpha():  # If input is not alphabetic
             print(Fore.RED + "Your name should contain only alphabetical \
 characters, try again.")
-        else:
+        else:  # Greets user with the username entered
             print(Fore.CYAN + f"Hello, {username}! Nice to meet you, let's \
 play!\n")
             return username
@@ -92,19 +92,19 @@ def play_game(word, hint, username):
     """
     Main function to play game.
     """
-    word_completion = "_" * len(word)
-    guessed = False
-    guessed_letters = []
-    guessed_words = []
-    tries = 7
+    word_completion = "_" * len(word)  # Displays "_" as chosen word length
+    guessed = False  # Displays the word as "_" until guessed
+    guessed_letters = []  # Empty list for guessed letters
+    guessed_words = []  # Empty list for guessed words
+    tries = 7  # How many tries till game end for user
 
     print(Fore.YELLOW + f"You've got 7 wrong guesses before the gallows are \
 full, {username}! You can do this!\n")
     print(display_hangman(tries))
-    print(word_completion)
-    print(f"Hint: {hint}\n")
-    print(f"Guessed Letters: {guessed_letters}")
-    print(f"Guessed Words: {guessed_words}\n")
+    print(word_completion)  # Displays word to user
+    print(f"Hint: {hint}\n")  # Displays hint associated with word to user
+    print(f"Guessed Letters: {guessed_letters}")  # Letters user has guessed
+    print(f"Guessed Words: {guessed_words}\n")  # Words user has guessed
 
     while not guessed and tries > 0:
         guess = input("Enter a letter or try for the whole word: \n")
@@ -139,15 +139,16 @@ def confirm_exit():
     Returns True if the user confirms ("y"), False if the user denies ("n")
     """
     while True:
+        # Input validation for user upon 'exit' input
         play = input(
             Fore.YELLOW + "Are you sure you'd like to exit the game?\n"
         ).lower()
         if play == "n":
             print(Fore.GREEN + "That's the spirit, you've got this!")
-            return False
+            return False  # Returns to game play
         elif play == "y":
             print(Fore.BLUE + "Exiting the game. Goodbye till next time!")
-            return True
+            return True  # Exits the game via sys.exit() in play_game
         else:
             print(Fore.RED + "Please enter either 'y' for Yes or 'n' for No")
 
