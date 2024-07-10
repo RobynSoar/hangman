@@ -119,11 +119,11 @@ full, {username}! You can do this!\n")
             if guess in guessed_letters:
                 print(Fore.RED + "You already guessed that letter")
             elif guess not in word:
-                print(f"The letter {guess} isn't in the word")
+                print(Fore.RED + f"The letter {guess} isn't in the word")
                 tries -= 1  # Lessens the wrong guessed available to user
                 guessed_letters.append(guess)  # Appends guessed_letters list
             else:
-                print(f"Yes! {guess} is in the word, keep going!")
+                print(Fore.GREEN + f"Yes! {guess} is in the word, keep going!")
                 guessed_letters.append(guess)  # Appends guessed_letters list
                 # Iterates through as tuples and converts back into string
                 word_completion = "".join(
