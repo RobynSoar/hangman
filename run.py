@@ -10,13 +10,13 @@ Date: July 2024
 import sys  # Imports the sys module to exit the system
 # Imports the random module to allow function to return random words
 import random
-# Imports colorama to colour ASCII  art and reset colour
+# Imports colorama to colour ASCII art and reset colour
 from colorama import Fore, init
 import title  # Imports from title.py
 from words import words  # Imports from words.py
 from hangman import display_hangman  # Imports from hangman.py
 
-# Initilizes colorama to reset colour changes
+# Initializes colorama to reset colour changes
 init(autoreset=True)
 
 
@@ -43,7 +43,7 @@ def play_question():
     Checks if user input is valid.
     """
     while True:  # Loops till user agrees to play
-        # .lower to allow Capitilised Y/N
+        # .lower to allow capitalised Y/N
         play = input("Would you like to play? (y/n):\n").lower()
         # User input validation
         if play != "y" and play != "n":
@@ -76,14 +76,14 @@ play!\n")
 
 def select_random_word():
     """
-    Selects a word and it's corrponding hint from the words dictionary \
+    Selects a word and its corresponding hint from the words dictionary \
 within words.py.
-    Returns words in uppercase and hints capitilized.
+    Returns words in uppercase and hints capitalised.
     """
     selected_word = random.choice(words)
     word = selected_word["word"]  # Chooses random word from words.py
     hint = selected_word["hint"]  # Gets the chosen word's hint from words.py
-    # Returns words in uppercase and hints capitalised
+    # Returns words in uppercase and hints capitalized
     return word.upper(), hint.capitalize()
 
 
@@ -107,7 +107,7 @@ full, {username}! You can do this!\n")
     print(f"Guessed Words: {guessed_words}\n")  # Words user has guessed
 
     while not guessed and tries > 0:
-        guess = input("Enter a letter or try for the whole word: \n")
+        guess = input("Enter a letter or try for the whole word: \n").upper()
         if guess.lower() == "exit":  # If input is 'exit', confirm game exit
             exit_confirmed = confirm_exit()
             if exit_confirmed:
@@ -116,7 +116,22 @@ full, {username}! You can do this!\n")
                 continue  # Continue the game if user decides not to exit
         # If guess is a single alphabetic letter
         elif len(guess) == 1 and guess.isalpha():
-            print("You entered a letter")
+            if guess in guessed_letters:
+                print(Fore.RED + "You already guessed that letter")
+            elif guess not in word:
+                print(f"The letter {guess} isn't in the word")
+                tries -= 1  # Lessens the wrong guessed available to user
+                guessed_letters.append(guess)  # Appends guessed_letters list
+            else:
+                print(f"Yes! {guess} is in the word, keep going!")
+                guessed_letters.append(guess)  # Appends guessed_letters list
+                # Iterates through as tuples and converts back into string
+                word_completion = "".join(
+                    [guess if letter == guess else wc_letter
+                     for letter, wc_letter in zip(word, word_completion)]
+                )
+                if "_ " not in word_completion:
+                    guessed = True
         # If guess is the same length as chosen word and alphabetic
         elif len(guess) == len(word) and guess.isalpha():
             print("You entered a full word")
@@ -130,6 +145,10 @@ or the same length as the whole word")
         else:  # If input contains any numbers or special characters
             print(Fore.RED + "Please try again with no numbers or special \
 characters!")
+
+        print(display_hangman(tries))
+        print(word_completion)
+        print(f"Hint: {hint}\n")
 
 
 def confirm_exit():
