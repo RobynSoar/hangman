@@ -92,7 +92,7 @@ def play_game(word, hint, username):
     """
     Main function to play game.
     """
-    word_completion = "_" * len(word)  # Displays "_" as chosen word length
+    word_completion = "_ " * len(word)  # Displays "_" as chosen word length
     guessed = False  # Displays the word as "_" until guessed
     guessed_letters = []  # Empty list for guessed letters
     guessed_words = []  # Empty list for guessed words
