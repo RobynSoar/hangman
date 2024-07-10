@@ -147,6 +147,7 @@ def confirm_exit():
             return False
         elif play == "y":
             print(Fore.BLUE + "Exiting the game. Goodbye till next time!")
+            return True
         else:
             print(Fore.RED + "Please enter either 'y' for Yes or 'n' for No")
 
