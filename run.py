@@ -61,7 +61,7 @@ def get_player_name():
     Validates user's name to be more than 1 character and only alphabetical.
     """
     while True:
-        username = input("Excellent! Please enter your name:\n")
+        username = input("Excellent! Please enter your name:\n").capitalize()
         if len(username) <= 1:  # If input is less than 1 character
             print(Fore.RED + "Please enter a name of at least two letters! \
 Try again.")
