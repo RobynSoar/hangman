@@ -169,6 +169,12 @@ characters!")
         # Written number of tries left to be clearer to the user
         print(f"Incorrect guesses left: {tries}\n")
 
+        #
+        if tries == 0:
+            print(Fore.RED + f"Sorry {username}, you've run out of guesses \
+and it's Game Over!")
+            print(Fore.YELLOW + f"The word was {word}")
+
 
 def confirm_exit():
     """
