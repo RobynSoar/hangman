@@ -49,7 +49,12 @@ def play_question():
         if play != "y" and play != "n":
             print(Fore.RED + "Please enter either 'y' for Yes or 'n' for No")
         elif play == "n":
-            print("Okay, let's play another time! Goodbye!")
+            print(Fore.BLUE + "Okay, let's play another time!\n")
+            print(Fore.YELLOW + "Thank you for playing!\n")
+            print(Fore.YELLOW + "This Hangman game was produced by Robyn \
+Soar\n")
+            print(Fore.CYAN + "LinkedIn Profile - www.linkedin.com/in/\
+robyn-soar-2104a011a\n")
             return False  # Exits game play
         elif play == "y":
             return True  # Continues game play
