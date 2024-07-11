@@ -104,7 +104,9 @@ full, {username}! You can do this!\n")
     print(word_completion)  # Displays word to user
     print(f"Hint: {hint}\n")  # Displays hint associated with word to user
     print(f"Guessed Letters: {guessed_letters}")  # Letters user has guessed
-    print(f"Guessed Words: {guessed_words}\n")  # Words user has guessed
+    print(f"Guessed Words: {guessed_words}")  # Words user has guessed
+    # Written number of tries left to be clearer to the user
+    print(f"Incorrect guesses left: {tries}\n")
 
     while not guessed and tries > 0:
         guess = input("Enter a letter or try for the whole word: \n").upper()
@@ -160,6 +162,10 @@ characters!")
         print(display_hangman(tries))
         print(word_completion)
         print(f"Hint: {hint}\n")
+        print(f"Guessed Letters: {guessed_letters}")  # Letters user has guessed
+        print(f"Guessed Words: {guessed_words}")  # Words user has guessed
+        # Written number of tries left to be clearer to the user
+        print(f"Incorrect guesses left: {tries}\n")
 
 
 def confirm_exit():
