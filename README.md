@@ -48,6 +48,157 @@ View the live site [here](https://robyn-hangman-b1356368c517.herokuapp.com/)
 
 ### Existing Features
 
+__Title Screen__
+
+Hangmans ASCII art title was made with pyfiglet and colorama modules.
+
+- Displays a clear title and introduction to the game.
+- Provides the user with clear basic instruction and information.
+- Asks the user if they would like to play the game.
+
+![Hangman ASCII Art Title](documentation/features/title-screen.png)
+
+__Play Game Validators__
+
+After the basic rules, the user is asked if they'd like to play, the user is notified that they have to answer with either a "y" for yes, or "n" for no.
+This appears if the user inputs something other than "y" or "n" but also if the user inputs a number or special character, as the game has explicitly notified the player what inputs are required.
+
+![Play Game Validators](documentation/features/play-validator.png)
+
+The function also allows uppercase and lowercase inputs of "y" and "n" as seen below.
+
+![Play Game - Lowercase](documentation/features/play-y-lower.png)
+
+![Play Game - Uppercase](documentation/features/play-y-upper.png)
+
+If the user answers with "n", the game will end with thanks to the player and credits to the myself as the developer with a link to my LinkedIn.
+
+![Goodbye Credits](documentation/features/goodbye-credits.png)
+
+This can also be found at the end of the game when the user wins or losses and is asked if they'd like to play again.
+
+![Goodbye Credits - At End of Game](documentation/features/goodbye-credits-end-game.png)
+
+__User Name and Validators__
+
+After accepting (Pressing the "y" key) to play the game, the user is then asked to provide their name. This will then be called throughout the game for greetings, goodbyes, game wins and game losses.
+
+The function has validators to make sure the user is inputting the correct data. As seen below:
+
+- User cannot enter nothing
+- Entered at least two characters
+- Characters cannot contain numbers or special characters, even with an input with enough characters
+- Returns the username capitalised to be used throughout.
+
+![Username Validators](documentation/features/username-validators.png)
+
+__Beginning of gameplay__
+
+After the user inputs their name, the game welcomes them and reiterates how many wrong guesses they've got before it's Game Over.
+
+It also shows the game main layout with a structure that's repeated after each guess of a word or letter till the game is over, this includes:
+
+- The gallows, which gives the user a visual representation of how many incorrect guesses they've got left till Game Over.
+- The word, chosen at random, and hidden from the player.
+- The hint corresponding to the word generated along with how many letters it contains. This is because the "_" used to hide the letters as placeholders can make it hard to see how many letters there are, and allow the user to guess without counting the underscores.
+- Guessed letters as an empty list, which will gather the letters the user has previously guessed, whether correct or incorrect.
+- Guessed words as an empty list, which will gather the words the user has previously guessed incorrectly.
+- The amount of incorrect guesses the user has left before Game Over as a written representation to the user, incase the visual image of the gallows isn't clear to the user.
+- Prompts the user for their guess, either a single letter or for the whole word.
+
+The words and hints used for each Hangman game are randomly generated from a words.py file that is separate from the run.py file and imported in.
+
+![Game Play Start](documentation/features/game-play-start.png)
+
+__Game Input Validators__
+
+Within the letter or word prompt from the game, validators make sure that the user is entering a correct input.
+
+Invalid inputs do not take down the guesses left and they also do not accept numbers or special characters including empty inputs.
+
+![Incorrect Input - No Numbers or Special Characters](documentation/features/game-validators-number-or-special.png)
+
+Correct inputs are either a single letter or a guess that is the same length of the hidden word
+
+![Incorrect Input - Not Single Letter or Length of Word](documentation/features/not-length-of-letter-or-word.png)
+
+__Correct Guess__
+
+A correct guess of a letter within the hidden word will give feedback to the user by reiterating that the letter they input is in the word in green.
+
+The game will show the updated main necessary information to the user.
+
+- The correct letter is input into the word in it's correct placement.
+- The guessed letters list now stores the letter recently guessed by the user.
+- The incorrect guessed left has not changed as this was correct.
+
+The game then prompts the user for another letter or whole word.
+
+![Correct Letter](documentation/features/correct-letter.png)
+
+__Incorrect Guess__
+
+An incorrect guess of a letter or word within will give feedback to the user by reiterating that the input letter or word is either not within the word or not the whole word, and display this in red.
+
+The game will show the updated main necessary information to the user.
+
+- The gallows art has updated to show the slow addition of a person with each incorrect guess.
+- The incorrect letters guessed are stored within the guessed letters list.
+- The incorrect words guessed are stores within the guessed words list.
+- The incorrect guesses left has depleted by 1 each wrong answer for either wrong letter or wrong word guessed.
+
+The game then prompts the user for another letter or whole word.
+
+![Incorrect Guess](documentation/features/incorrect-words-guessed.png)
+
+__The Gallows__
+
+The gallows visual representation is made with ASCII art and stored within a file separate from the run.py, called hangman.py, which is then imported in.
+
+For each incorrect guess by the user, the gallows art updates in stages as seen below:
+
+![Gallows Stages](documentation/features/gallow-stages.png)
+
+__Game - Win__
+
+If the user is able to guess all the letters in the word or the whole word at once, the game reiterates the word to the user with green text. Showing again the game main setup, the full word now filled in, as well as the previous information shown. Showing the current stage of the gallows, letters and words guessed, and how many tries the user had left.
+
+In green text the game then congratulates the user and thanking the user with their input username, and asks if they would like to play another game.
+
+This loops back to the start of the game under the title screen, if the player inputs "y" a fresh game will begin with a new hidden word and hint, refreshing the users guesses left, emptying the letter and word lists and resetting the gallows.
+
+If the user answers "n" they are taken to the ending credits as seen above.
+
+![Game Win](documentation/features/game-win.png)
+
+__Game - Lose__
+
+If the user is unable to guess the whole word before the gallows is full and the guesses they have left has depleted to 0, the game consoles the user and letting them know they had no more guesses and the game is over in red text.
+
+The hidden word is then revealed to the player in yellow text.
+
+The game then thanks the user for playing and asks if they'd like to play again in green text.
+
+This loops back to the start of the game under the title screen, if the player inputs "y" a fresh game will begin with a new hidden word and hint, refreshing the users guesses left, emptying the letter and word lists and resetting the gallows.
+
+If the user answers "n" they are taken to the ending credits as seen above.
+
+![Game Lose](documentation/features/game-lose.png)
+
+__Exiting the game__
+
+The main game function allows the user to input "exit" instead of a letter or word. They are then asked by the program if they're sure they'd like to exit, which the user can input either a "y" for yes or a "n" for no.
+
+Validators ensure the user can enter either a "y" or a "no" and no words,numbers or special characters.
+
+![Exit Game Validators](documentation/features/exit-validators.png)
+
+If the user changes their mind and doesn't want to exit and presses "n", the game will continue from where it left off without restarting as seen below.
+
+![Exit Declined](documentation/features/exit-false-game-continue.png)
+
+![Exit Declined - Continued](documentation/features/exit-false.png)
+
 ### Features Left to Implement
 
 [Return to Table of Contents](#table-of-contents)
