@@ -64,9 +64,11 @@ This aids the creation of the game by showing validators for user input, where f
 
 __pyfiglet (PyPi)__ - Used to generate ASCII art text for the title
 
-__Colorama__ - Used to colour ASCII art and text feedback to the user
+__colorama__ - Used to colour ASCII art and text feedback to the user
 
 __sys__ - Used to enable the user to be able to exit the program at any time
+
+__random__ - Used to allow the program to randomly choose a word from a dictionary within the words.py file
 
 ### Technologies Used
 
