@@ -26,6 +26,8 @@ View the live site [here](https://robyn-hangman-b1356368c517.herokuapp.com/)
     - [Features Left to Implement](#features-left-to-implement)
 - [Design](#design)
     - [Flowchart](#flowchart)
+    - [Text Colours](#text-colours)
+    - [Terminal Sizing](#terminal-sizing)
     - [Imported Libraries](#imported-libraries)
     - [Technologies Used](#technologoies-used)
 - [Testing](#testing)
@@ -59,6 +61,34 @@ View the live site [here](https://robyn-hangman-b1356368c517.herokuapp.com/)
 This aids the creation of the game by showing validators for user input, where functions are needed as well as game end points.
 
 ![Hangman flowchart using Lucidchart](documentation/flowchart/hangman-flowchart.png)
+
+### Text colours
+
+Colorama was imported to use coloured font within the terminal.
+
+White
+    - For basic rules at the beginning and anything within the gameplay.
+
+Cyan
+    - For the greeting message, presents as an excited colour hue.
+
+Blue
+    - For the goodbye message, presents as a more sullen hue.
+
+Yellow
+    - For any important information such as exiting the game and reiteration.
+
+Red
+    - For any messages such as incorrect inputs, wrong guesses or losing the game.
+
+Green
+    - For any correct guesses and winning the game.
+
+### Terminal Sizing
+
+The Hangman game was designed in Python for a terminal 80 characters wide and 24 lines high.
+
+The game was designed to display correctly within the 80 character limit.
 
 ### Imported Libraries
 
