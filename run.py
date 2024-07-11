@@ -202,10 +202,16 @@ def main():
     Run all program functions
     """
     print_welcome_message()
-    if play_question():
-        username = get_player_name()
-        word, hint = select_random_word()
-        play_game(word, hint, username)
+    while True:
+        if play_question():
+            username = get_player_name()
+            word, hint = select_random_word()
+            play_game(word, hint, username)
+        else:
+            break
+
+        print(Fore.GREEN + F"Thanks for playing Hangman {username}, maybe \
+another game?\n")
 
 
 main()  # Runs main function for the game to play
