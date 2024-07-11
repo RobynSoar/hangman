@@ -50,11 +50,7 @@ def play_question():
             print(Fore.RED + "Please enter either 'y' for Yes or 'n' for No")
         elif play == "n":
             print(Fore.BLUE + "Okay, let's play another time!\n")
-            print(Fore.YELLOW + "Thank you for playing!\n")
-            print(Fore.YELLOW + "This Hangman game was produced by Robyn \
-Soar\n")
-            print(Fore.CYAN + "LinkedIn Profile - www.linkedin.com/in/\
-robyn-soar-2104a011a\n")
+            game_end_credits()  # Prints end credits
             return False  # Exits game play
         elif play == "y":
             return True  # Continues game play
@@ -193,16 +189,27 @@ def confirm_exit():
     while True:
         # Input validation for user upon 'exit' input
         play = input(
-            Fore.YELLOW + "Are you sure you'd like to exit the game?\n"
+            Fore.YELLOW + "Are you sure you'd like to exit the game? (y/n)\n"
         ).lower()
         if play == "n":
             print(Fore.GREEN + "That's the spirit, you've got this!")
             return False  # Returns to game play
         elif play == "y":
-            print(Fore.BLUE + "Exiting the game. Goodbye till next time!")
+            print(Fore.BLUE + "Exiting the game. Goodbye till next time!\n")
+            game_end_credits()  # Prints end credits
             return True  # Exits the game via sys.exit() in play_game
         else:
             print(Fore.RED + "Please enter either 'y' for Yes or 'n' for No")
+
+
+def game_end_credits():
+    """
+    Prints ending credits to user with developer name and LinkedIn profile link.
+    """
+    print(Fore.YELLOW + "Thank you for playing!\n")
+    print(Fore.YELLOW + "This Hangman game was produced by Robyn Soar\n")
+    print(Fore.CYAN + "LinkedIn Profile - www.linkedin.com/in/\
+robyn-soar-2104a011a\n")
 
 
 def main():
