@@ -210,8 +210,8 @@ def main():
         else:
             break
 
-        print(Fore.GREEN + F"Thanks for playing Hangman {username}, maybe \
-another game?\n")
+        print(Fore.GREEN + F"Thanks for playing Hangman {username}, another \
+game maybe?\n")
 
 
 main()  # Runs main function for the game to play
