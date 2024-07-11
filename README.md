@@ -26,6 +26,7 @@ View the live site [here](https://robyn-hangman-b1356368c517.herokuapp.com/)
     - [Features Left to Implement](#features-left-to-implement)
 - [Design](#design)
     - [Flowchart](#flowchart)
+    - [Imported Libraries](#imported-libraries)
     - [Technologies Used](#technologoies-used)
 - [Testing](#testing)
     - [Functional Testing](#functional-testing)
@@ -58,6 +59,14 @@ View the live site [here](https://robyn-hangman-b1356368c517.herokuapp.com/)
 This aids the creation of the game by showing validators for user input, where functions are needed as well as game end points.
 
 ![Hangman flowchart using Lucidchart](documentation/flowchart/hangman-flowchart.png)
+
+### Imported Libraries
+
+__pyfiglet (PyPi)__ - Used to generate ASCII art text for the title
+
+__Colorama__ - Used to colour ASCII art and text feedback to the user
+
+__sys__ - Used to enable the user to be able to exit the program at any time
 
 ### Technologies Used
 
