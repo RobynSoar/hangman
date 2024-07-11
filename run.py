@@ -134,7 +134,18 @@ full, {username}! You can do this!\n")
                     guessed = True
         # If guess is the same length as chosen word and alphabetic
         elif len(guess) == len(word) and guess.isalpha():
-            print("You entered a full word")
+            if guess in guessed_words:
+                print(Fore.RED + f"You already guessed that word, it's not \
+{guess}.")  # If user has guessed that word before
+            elif guess != word:
+                # If user guess is not the hidden word
+                print(Fore.RED + f"{guess} is not the word.")
+                tries -= 1  # Removes 1 try for the user to guess incorrectly
+                guessed_words.append(guess)  # Adds guessed word to list
+            else:
+                print(Fore.GREEN + f"YOU GOT IT! The word was {guess}!")
+                guessed = True  # If above passes, guess = hidden word
+                word_completion = word  # Hidden word is revealed
         # If input is alphabetic but more than a letter but not len of word
         elif (
             not (len(guess) == 1 or len(guess) == len(word))
