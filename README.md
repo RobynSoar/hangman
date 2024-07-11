@@ -189,7 +189,9 @@ __Exiting the game__
 
 The main game function allows the user to input "exit" instead of a letter or word. They are then asked by the program if they're sure they'd like to exit, which the user can input either a "y" for yes or a "n" for no.
 
-Validators ensure the user can enter either a "y" or a "no" and no words,numbers or special characters.
+Validators ensure the user can enter either a "y" or a "no" and no words, numbers or special characters.
+
+If the user inputs "y" to exit the game the end credits and LinkedIn profile link is shown to the user.
 
 ![Exit Game Validators](documentation/features/exit-validators.png)
 
