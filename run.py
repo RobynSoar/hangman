@@ -123,7 +123,7 @@ full, {username}! You can do this!\n")
                 tries -= 1  # Lessens the wrong guessed available to user
                 guessed_letters.append(guess)  # Appends guessed_letters list
             else:
-                print(Fore.GREEN + f"Yes! {guess} is in the word, keep going!")
+                print(Fore.GREEN + f"Yes! {guess} is in the word")
                 guessed_letters.append(guess)  # Appends guessed_letters list
                 # Iterates through as tuples and converts back into string
                 word_completion = "".join(
