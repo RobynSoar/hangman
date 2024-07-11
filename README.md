@@ -140,6 +140,23 @@ The following git commands were used throughout development to push code to the 
 
 ### Deployment to Heroku
 
+1. Make sure that Heroku will install dependencies used by opening the "requirements.txt" file and typing "pip3 freeze > requirements.txt" and hit the "Enter" key.
+2. Commit and push the changes to GitHub.
+3. Go to Heroku.com and sign up for an account.
+4. Click "Create new app".
+5. Give the app a unique name, select region and "Create app".
+6. Go to "Settings" and then to "Config Vars".
+7. Create a Config Var called PORT (Key) and set it to 8000 (Value).
+8. Scroll down, click "Add buildpack" and add two buildpacks within the "Settings" tab, and add them in the following order.
+    * heroku/python
+    * heroku/nodejs
+9. Click "Deploy" in the navbar at the top of the page.
+10. Select "GitHub" within the section called "Deployment method".
+11. Click "Connect to GitHub".
+12. Under "Connect to GitHub, search for your repository name and click "Connect".
+13. Scroll down the page to Automatic deploys and click "Enable Automatic Deploys" to enable Heroku to rebuild the app when a new change is pushed to GitHub.
+14. When deployment is completed and you're notified that the deployment was successful, click "View" to go to the mock terminal.
+
 ### Clone the Repository Code Locally
 
 Navigate to the GitHub Repository you want to clone to use locally:
