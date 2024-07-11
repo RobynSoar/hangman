@@ -178,7 +178,7 @@ word was {word}!\n")
         print(Fore.RED + f"Sorry {username}, you've run out of guesses \
 and it's Game Over!\n")
         print(Fore.YELLOW + f"The word was {word}\n")
-            
+
 
 def confirm_exit():
     """
@@ -204,7 +204,9 @@ def confirm_exit():
 
 def game_end_credits():
     """
-    Prints ending credits to user with developer name and LinkedIn profile link.
+    Prints ending credits to user with:
+    - Developer name
+    - LinkedIn profile link.
     """
     print(Fore.YELLOW + "Thank you for playing!\n")
     print(Fore.YELLOW + "This Hangman game was produced by Robyn Soar\n")
