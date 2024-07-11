@@ -2,7 +2,13 @@
 (by Robyn Soar)
 
 Hangman is a word game and runs in the Code Institute mock terminal on Heroku.
-It's a well-known childhood word game in which traditionally is played with two or more players, with one person choosing a word and setting up the game, and the other being the one to guess the letters one by one or the whole word at a time. Hangman has been made so the user can play against a computer who decides on a random word, keeps tally of used letters and guesses left available, as well as gives hints to the user or the hidden word. View the live site [here]
+It's a well-known childhood word game in which traditionally is played with two or more players, with one person choosing a word and setting up the game, and the other being the one to guess the letters one by one or the whole word at a time. 
+
+This Hangman game has been made so the user can play against a computer who decides on a random word, keeps tally of used letters and guesses left available, as well as gives hints to the user of the hidden word. 
+
+As this terminal-based Python project is design specifically for laptop / desktop screens, it will not display correctly on a mobile.
+
+View the live site [here](https://robyn-hangman-b1356368c517.herokuapp.com/)
 
 ## Key Project Goals
 
