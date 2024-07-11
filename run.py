@@ -180,8 +180,8 @@ characters!")
 word was {word}!\n")
     else:
         print(Fore.RED + f"Sorry {username}, you've run out of guesses \
-and it's Game Over!")
-        print(Fore.YELLOW + f"The word was {word}")
+and it's Game Over!\n")
+        print(Fore.YELLOW + f"The word was {word}\n")
             
 
 def confirm_exit():
