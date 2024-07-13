@@ -281,6 +281,291 @@ __random__ - Used to allow the program to randomly choose a word from a dictiona
 
 ### Functional Testing
 
+Testing was performed throughout construction of the Hangman game's code for all validators of user input and the results given by the program.
+
+__"Would you like to play? (y/n)"__
+
+Program asks the user if they would like to play and prompts them to input either (y/n).
+
+_- Scenario One_
+
+User inputs nothing / numbers / letters that aren't "y" or "n".
+
+Expected: 
+
+Program responds in red text "Please enter either 'y' for Yes or 'n' for No"
+
+Actual:
+
+As expected.
+
+_- Scenario Two_
+
+User inputs lowercase or uppercase "y".
+
+Expected: 
+
+Program responds with "Excellent! Please enter your name:", and prompts user to enter their name.
+
+Actual:
+
+As expected.
+
+_- Scenario Three_
+
+User enters lowercase or uppercase "n".
+
+Expected:
+
+Program prints the following credits of the developer:
+    - "Okay, let's play another time"
+    - "Thank you for playing!"
+    - "This Hangman game was produced by Robyn Soar"
+    - "LinkedIn Profile - www.linkedin.com/in/robyn-soar-2104a011a"
+
+The play_game function loop then calls ```break```.
+
+Actual:
+
+As expected.
+
+__"Excellent! Please enter your name:"__
+
+Program prompt user to input users name.
+
+_- Scenario One_
+
+User inputs less than 2 characters. This could be an number, special charater or singlular letter.
+
+Expected:
+
+Program prints in red text to user "Please enter a name of at least two letters! Try again."
+
+Actual:
+
+As expected.
+
+_- Scenario Two_
+
+User inputs at least two characters but it contains either a number or special character.
+
+Expected:
+
+Program prints in red text to user "Your name should contain only alphabetical characters, try again."
+
+Actual:
+
+As expected.
+
+_- Scenario Three_
+
+User inputs using only alphabetical letters and at least two.
+
+Expected:
+
+Program prints in cyan text to user "Hello {username}! Nice to meet you, let's play!" with the username the user input as a capitalised word and starts the game play.
+
+    - Randomly generates a word and corresponding hint from the words.py dictionary
+    - Displays the current stage of the gallows
+    - Hides the letters of the hidden word with underscores
+    - Displays the corresponding hint for the word
+    - Displays the guessed letters list
+    - Displays the guessed words list
+    - Displays the incorrect guesses left
+
+Actual:
+
+As expected.
+
+__"Enter a letter or try for the whole word:"__
+
+Program prompts the user to "Enter a letter or try for the whole word".
+
+_- Scenario One_
+
+User enters a number or special character.
+
+Expected:
+
+Program prints to the user in red text "Please try again with no numbers or special characters."
+
+Actual:
+
+As expected.
+
+_- Scenario Two_
+
+User enters more than a single letter but not the same length as the hidden word.
+
+Expected:
+
+Program prints to the user in red text "Your guess has to be either a single letter or the same length as the whole word".
+
+Actual:
+
+As expected.
+
+_- Scenario Three_
+
+User enters a single letter *not* in the hidden word.
+
+Expected:
+
+Program prints:
+    - "The letter {guess} isn't in the word"
+    - Displays the gallow stage corresponding to the amount of tries left
+    - Updates guessed letters list
+    - Updates incorrect guesses left
+
+Prompts user to enter a letter or try for the whole word.
+
+Actual:
+
+As expected.
+
+_- Scenario Four_
+
+User enters a word that is *not* the hidden word.
+
+Expected:
+
+Program prints:
+    - "{guess} is not the word"
+    - Displays the gallow stage corresponding to the amount of tries left
+    - Updates guessed words list
+    - Updates incorrect guesses left
+
+Prompts user to enter a letter or try for the whole word.
+
+Actual:
+
+As expected
+
+_- Scenario Five_
+
+User enters a single letter in the hidden word.
+
+Expected:
+
+Program prints:
+    - "Yes! {guess} is in the word"
+    - Updates the hidden word with the correct letter guessed in the correct position
+    - Updates guessed letters list
+
+Prompts user to enter a letter or try for the whole word.
+
+Actual:
+
+As expected
+
+_- Scenario Six_
+
+User enters the last single letter required in the hidden word.
+
+Expected:
+
+Program prints:
+    - "Yes! {guess} is in the word"
+    - Updates the hidden word with the correct letter guessed in the correct position
+    - Updates guessed letters list
+    - "Congratulations {username}! You got it, the word was {word}!"
+    - "Thanks for playing Hangman {username}, another game maybe?
+
+Loops back to the start of the play_game function and asks the user if they'd like to play again and prompts for an input.
+
+Actual:
+
+As expected
+
+_- Scenario Seven_
+
+User enters a word that is the hidden word.
+
+Expected:
+
+Program prints:
+    - "YOU GOT IT! The word was {word}!"
+    - Updates the hidden word with the correct letters in the correct position
+    - "Congratulations {username}! You got it, the word was {word}!"
+    - "Thanks for playing Hangman {username}, another game maybe?
+
+Loops back to the start of the play_game function and asks the user if they'd like to play again and prompts for an input.
+
+Actual:
+
+As expected
+
+_- Scenario Eight_
+
+User guesses incorrectly 7 times causing Game Over.
+
+Expected:
+
+Program prints:
+    - "Sorry {username}, you've run out of guesses and it's Game Over!"
+    - "The word was {word}"
+    - "Thanks for playing Hangman {username}, another game maybe?
+
+Loops back to the start of the play_game function and asks the user if they'd like to play again and prompts for an input.
+
+Actual:
+
+As expected
+
+__"Are you sure you'd like to exit the game? (y/n)"__
+
+Within the program asking the user to enter a letter or try for the whole word, the user inputs "exit". Program asks the user if they are sure they'd like to exit the game and prompts them to input either (y/n).
+
+_- Scenario One_
+
+User inputs nothing / numbers / letters that aren't "y" or "n".
+
+Expected: 
+
+Program responds in red text "Please enter either 'y' for Yes or 'n' for No"
+
+Actual:
+
+As expected.
+
+_- Scenario Two_
+
+User inputs lowercase or uppercase "y".
+
+Expected: 
+
+Program responds with:
+
+    - "Exiting the game. Goodbye till next time!"
+
+Program then responds with the same goodbye credits as if the user had declined to play again.
+
+    - "Thank you for playing"
+    - "This Hangman game was produced by Robyn Soar"
+    - "LinkedIn Profile - www.linkedin.com/in/robyn-soar-2104a011a"
+
+Program then uses ```sys.exit()``` to exit the loop.
+
+Actual:
+
+As expected.
+
+_- Scenario Three_
+
+User enters lowercase or uppercase "n".
+
+Expected:
+
+Program prints:
+
+    - "That's the spirit, you've got this!"
+
+Program then asks the user to "Enter a letter or try for the whole word"
+
+Actual:
+
+As expected.
+
 ### Validator Testing
 
 The Hangman game code is written is Python only, passing it through the [CI Python Linter - Pep8 Validator](https://pep8ci.herokuapp.com/)
