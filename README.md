@@ -204,7 +204,7 @@ If the user changes their mind and doesn't want to exit and presses "n", the gam
 ### Features Left to Implement
 
 - A difficulty system that the user will be able to choose for themself.
-This would be something that would keep words fairly easy as they are currently, to more complex words, another difficulty on top of that and the last difficulty to include all words from the English dictionary at random.
+This would be something that would keep words fairly easy as they are currently as the first level, to more complex words, another difficulty on top of that and the last difficulty to include all words from the English dictionary at random.
 
 - A scoreboard for all players of the Hangman game that has a leaderboard of the users that were able to guess the words with the fewest incorrect guesses.
 
@@ -282,6 +282,12 @@ __random__ - Used to allow the program to randomly choose a word from a dictiona
 ### Functional Testing
 
 ### Validator Testing
+
+The Hangman game code is written is Python only, passing it through the [CI Python Linter - Pep8 Validator](https://pep8ci.herokuapp.com/)
+
+No errors were found when passing the run.py file through the CI Python Linter.
+
+![Pep8 Validator](documentation/testing/linter-pass.png)
 
 ### Fixed Bugs
 
