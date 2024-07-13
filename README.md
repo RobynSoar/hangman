@@ -203,6 +203,11 @@ If the user changes their mind and doesn't want to exit and presses "n", the gam
 
 ### Features Left to Implement
 
+- A difficulty system that the user will be able to choose for themself.
+This would be something that would keep words fairly easy as they are currently, to more complex words, another difficulty on top of that and the last difficulty to include all words from the English dictionary at random.
+
+- A scoreboard for all players of the Hangman game that has a leaderboard of the users that were able to guess the words with the fewest incorrect guesses.
+
 [Return to Table of Contents](#table-of-contents)
 
 ## Design
